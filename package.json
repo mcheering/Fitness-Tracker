@@ -1,7 +1,7 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "workout_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Track your fitness",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,11 +9,25 @@
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Matthew Heering",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
-    "mongoose": "^5.3.16",
-    "morgan": "^1.9.1"
+    "mongojs": "^3.1.0",
+    "mongoose": "^5.3.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcheering/Fitness-Tracker.git"
+  },
+  "keywords": [
+    "workout"
+  ],
+  "bugs": {
+    "url": "https://github.com/mcheering/Fitness-Tracker/issues"
+  },
+  "homepage": "https://github.com/mcheering/Fitness-Tracker#readme",
+  "devDependencies": {
+    "morgan": "^1.10.0"
   }
 }
