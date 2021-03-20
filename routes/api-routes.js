@@ -4,7 +4,7 @@ module.exports = function (app) {
       app.get("/api/workouts", function (req, res) {
             Workout.find()
                   .then(data => {
-                        res.send(data)
+                        res.json(data)
                   })
                   .catch(err => {
                         res.json(err)
@@ -14,7 +14,7 @@ module.exports = function (app) {
 
       app.post("/api/workouts", function (req, res) {
             Workout.create({})
-                  .then(data => res.send(data)
+                  .then(data => res.json(data)
                         .catch(err => {
                               res.json(err)
                         }))
@@ -23,7 +23,7 @@ module.exports = function (app) {
       app.get("/api/workouts/range", function (req, res) {
             Workout.find()
                   .then(data => {
-                        res.send(data)
+                        res.json(data)
                   })
                   .catch(err => {
                         res.json(err)
@@ -33,7 +33,7 @@ module.exports = function (app) {
 
       app.post("/api/workouts/range", function (req, res) {
             Workout.create({})
-                  .then(data => res.send(data))
+                  .then(data => res.json(data))
                   .catch(err => {
                         res.json(err)
                   })
@@ -45,7 +45,7 @@ module.exports = function (app) {
                   { $push: { exercises: body } },
                   { new: true, runValidators: true }
             )
-                  .then(data => res.send(data))
+                  .then(data => res.json(data))
                   .catch(err => {
                         res.json(err)
                   })
